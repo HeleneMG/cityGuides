@@ -120,8 +120,8 @@ footer p{
   display:none;
   position: fixed; 
   z-index: 2;
-  bottom: 60px; 
-  right: 10px;
+  bottom: 0px; 
+  right: 0px;
   cursor: pointer;
 } 
 #toTop img { 
@@ -173,4 +173,8 @@ footer p{
     footer{
         background-color: rgba(0, 0, 0, 0.76);
     }
+    #toTop { 
+        bottom: 60px; 
+        right: 10px;
+    } 
 }
