@@ -15,9 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::view('/', 'accueil');
 Route::view('/contact', 'contact');
+Route::view('/espace-membre', 'espace-membre');
+Route::view('/espace-admin', 'espace-admin');
 //paramètre 1 = url utilisée par le navigateur
-//paramètre 2 = template utilisé pour afficher la page
+//paramètre 2 = template (.blade.php) utilisé pour afficher la page
 
