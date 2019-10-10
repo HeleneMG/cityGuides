@@ -18,8 +18,33 @@
             <header>
                 <div class="fond-noir">
                     <div class="close">
-                        <p><a href="#annonces">x</a></p>
+                        <p><a href="#search">x</a></p>
                     </div>
+                    <nav>
+                        <div class="entete hamburger">
+                            <i class="material-icons menuHamb">menu</i>
+                            <ul class="menuNav">
+                                <li>Accueil</li>
+                                <li>Mon espace</li>
+                                <li></li>
+                                <li>Contact</li>
+                            </ul>
+                            <h3>CityGuides</h3>
+                        </div>
+                    </nav>
+                    <nav>
+                        <div class="entete desktop">
+                            <ul>
+                                <li><a href="#">Accueil</a></li>
+                                <li><a href="#">Mon espace</a></li>
+                                <li><a href="#">
+                                        <h3>CityGuides</h3>
+                                    </a></li>
+                                <li><a href="#">Un autre menu</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
                     <div class="titres">
                         <h1>City Guides</h1>
                         <h2>GUIDE AND VISIT !</h2>
@@ -35,27 +60,25 @@
                     </div>
 
                     <div class="fleche">
-                        <a href="#nav"><i class="material-icons md-36">arrow_downward</i></a>
+                        <a href="#main"><i class="material-icons md-36">arrow_downward</i></a>
                     </div>
                 </div>
             </header>
-            <main>
-                <div class="nav" id="nav">
-                    <div class="entete" >
-                        <i class="material-icons menuHamb">menu</i>
-                        <ul class="menuNav">
-                            <li>Accueil</li>
-                            <li>Mon espace</li>
-                            <li>Contact</li>
-                        </ul>
-                        <h3>CityGuides</h3>
-                    </div>
 
-                    <div class="search">
+            <main id="main">
+
+                <section class="recherche" id="search">
+                    <h3>Où et Quand?</h3>
+                    <div class="search" >
                         <label><input type="text"></label>
                         <a href="#"><i class="material-icons">search</i></a>
                     </div>
-                </div>
+                    <div class="search" id="search">
+                        <label><input type="date"></label>
+                        <a href="#"><i class="material-icons">search</i></a>
+                    </div>
+
+                </section>
 
                 <section class="annonces" id="annonces">
                     <div class="carte">
@@ -66,7 +89,7 @@
                         </div>
                         <div class="reserver">
                             <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
+                            <button><a href="#">Go !</a></button>
                         </div>
                     </div>
 
@@ -78,7 +101,7 @@
                         </div>
                         <div class="reserver">
                             <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
+                            <button><a href="#">Go !</a></button>
                         </div>
                     </div>
 
@@ -90,7 +113,7 @@
                         </div>
                         <div class="reserver">
                             <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
+                            <button><a href="#">Go !</a></button>
                         </div>
                     </div>
 
@@ -102,7 +125,7 @@
                         </div>
                         <div class="reserver">
                             <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
+                            <button><a href="#">Go !</a></button>
                         </div>
                     </div>
                     <div class="carte">
@@ -113,19 +136,7 @@
                         </div>
                         <div class="reserver">
                             <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
-                        </div>
-                    </div>
-
-                    <div class="carte">
-                        <img src="assets/img/lepanier.jpg" alt="le panier">
-                        <div class="contenu">
-                            <h3>Visite du quartier du Panier</h3>
-                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
-                        </div>
-                        <div class="reserver">
-                            <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
+                            <button><a href="#">Go !</a></button>
                         </div>
                     </div>
 
@@ -137,7 +148,7 @@
                         </div>
                         <div class="reserver">
                             <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
+                            <button><a href="#">Go !</a></button>
                         </div>
                     </div>
 
@@ -149,14 +160,34 @@
                         </div>
                         <div class="reserver">
                             <h4>Samedi 22 mai à 14h</h4>
-                            <button>Go !</button>
+                            <button><a href="#">Go !</a></button>
+                        </div>
+                    </div>
+
+                    <div class="carte">
+                        <img src="assets/img/lepanier.jpg" alt="le panier">
+                        <div class="contenu">
+                            <h3>Visite du quartier du Panier</h3>
+                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                        </div>
+                        <div class="reserver">
+                            <h4>Samedi 22 mai à 14h</h4>
+                            <button><a href="#">Go !</a></button>
                         </div>
                     </div>
                 </section>
             </main>
 
             <footer>
-                <p>tous droits réservés 2019</p>
+                <ul>
+                    <li>
+                        <h3>CityGuides</h3>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Mentions légales</li>
+                    <li>&copy;CityGuides 2019, tous droits réservés</li>
+                </ul>
             </footer>
 
             <div id="toTop">
