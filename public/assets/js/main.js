@@ -29,6 +29,13 @@ ScrollReveal().reveal('.reserver button', {
     interval: 200,
     reset: true
 });
+ScrollReveal().reveal('#contact-form', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '20px',
+    delay: 200,
+    reset: true
+});
 
 //NAVBAR+TOTOP
 window.onscroll = function () { fixedNavbar(), scrollFunction() };

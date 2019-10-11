@@ -9,24 +9,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat|Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo url('/assets/css/style.css') ?>">
-        <title>Espace membre - CityGuides</title>
+        <link rel="stylesheet" href="<?php echo url('/assets/css/style-membre.css') ?>">
+        <title>Espace Membre - CityGuides</title>
     </head>
 
     <body>
-        <header>
-            <div class="fond-noir">
-                <div class="close">
-                    <p><a href="#search">x</a></p>
-                </div>
+        <div id="app2">
+            <header>
                 <nav>
                     <div class="entete hamburger">
                         <i class="material-icons menuHamb">menu</i>
                         <ul class="menuNav">
-                            <li>Accueil</li>
-                            <li>Mon espace</li>
+                            <li><a href="<?php echo url('/') ?>">Accueil</a></li>
+                            <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
                             <li></li>
-                            <li>Contact</li>
+                            <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                         </ul>
                         <h3>CityGuides</h3>
                     </div>
@@ -44,43 +41,29 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="titres">
-                    <h1>City Guides</h1>
-                    <h2>GUIDE AND VISIT !</h2>
-                </div>
+            </header>
 
-                <div class="inscription">
-                    <button><a href="#">INSCRIPTION</a></button>
-                </div>
+            <main id="main">
+                <section class="membre">
+                    
+                </section>
+            </main>
 
-                <div class="login">
-                    <h3><b>Déjà Inscrit.e ?</b></h3>
-                    <button><a href="<?php echo url('/espace-membre') ?>">Connexion</a></button>
-                </div>
+            <footer>
+                <ul>
+                    <li>
+                        <h3>CityGuides</h3>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Mentions légales</li>
+                    <li>&copy;CityGuides 2019, tous droits réservés</li>
+                </ul>
+            </footer>
 
-                <div class="fleche">
-                    <a href="#main"><i class="material-icons md-36">arrow_downward</i></a>
-                </div>
+            <div id="toTop">
+                <a class="top" href="#"><i class="material-icons md-36 upwards">arrow_upward</i></a>
             </div>
-        </header>
-        <main>
-
-        </main>
-        <footer>
-            <ul>
-                <li>
-                    <h3>CityGuides</h3>
-                </li>
-            </ul>
-            <ul>
-                <li>Mentions légales</li>
-                <li>&copy;CityGuides 2019, tous droits réservés</li>
-            </ul>
-        </footer>
-
-        <div id="toTop">
-            <a class="top" href="#"><i class="material-icons md-36 upwards">arrow_upward</i></a>
-        </div>
         </div>
 
         <script src="<?php echo url('/assets/js/main.js') ?>"></script>
