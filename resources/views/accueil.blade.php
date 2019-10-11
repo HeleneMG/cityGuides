@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <head>
         <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div id="app">
+        <div id="app1">
             <header>
                 <div class="fond-noir">
                     <div class="close">
@@ -24,10 +24,10 @@
                         <div class="entete hamburger">
                             <i class="material-icons menuHamb">menu</i>
                             <ul class="menuNav">
-                                <li>Accueil</li>
-                                <li>Mon espace</li>
+                                <li><a href="<?php echo url('/') ?>">Accueil</a></li>
+                                <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
                                 <li></li>
-                                <li>Contact</li>
+                                <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             </ul>
                             <h3>CityGuides</h3>
                         </div>
@@ -35,13 +35,13 @@
                     <nav>
                         <div class="entete desktop">
                             <ul>
-                                <li><a href="#">Accueil</a></li>
-                                <li><a href="#">Mon espace</a></li>
-                                <li><a href="#">
+                                <li><a href="<?php echo url('/') ?>">Accueil</a></li>
+                                <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
+                                <li><a href="<?php echo url('/') ?>">
                                         <h3>CityGuides</h3>
                                     </a></li>
                                 <li><a href="#">Un autre menu</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -68,11 +68,12 @@
             <main id="main">
 
                 <section class="recherche" id="search">
-                    <h3>Où et Quand?</h3>
+                    <h3>Où ?</h3>
                     <div class="search" >
                         <label><input type="text"></label>
                         <a href="#"><i class="material-icons">search</i></a>
                     </div>
+                    <h3>Quand ?</h3>
                     <div class="search" id="search">
                         <label><input type="date"></label>
                         <a href="#"><i class="material-icons">search</i></a>
