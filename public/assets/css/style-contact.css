@@ -101,15 +101,19 @@ h3{
     outline: white;
 }
 #contact-form button{
+    height: 44px;
     background-color: white;
     color: #FFC000;
     border-radius: 24px;
     padding: 14px 50px;
     border: none;
+    transition: 0.3s;
 }
 #contact-form button:hover{
     padding: 11px 47px;
     cursor: pointer;
+    transition: 0.3s;
+
 }
 
 /*FOOTER*/
