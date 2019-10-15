@@ -113,10 +113,10 @@ nav{
     width: 100%;
     display: flex;
     padding: 0px 18px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.80);
     justify-content: space-between;
     align-items: center;  
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px rgb(51, 51, 51);
 }
 .entete.desktop{
     display: none;
@@ -296,13 +296,66 @@ footer ul{
 }
 
 @media screen and (min-width: 769px){
-
+    
     .close a{
         color:rgba(15, 15, 15, 0);
     }
     header{
         height: 100%;
     }
+
+    .flexsearch{
+        display: flex;
+        width: 100%;
+    }
+
+    .flextitres{
+        width: 50%;
+        margin-right: 150px;
+    }
+    
+    #search-form{
+        width: 25%;
+        height: 72vh;
+        margin: auto;
+        padding: 10px;
+        background-color:#FFC000;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.116);
+        border-radius: 10px;
+    }
+
+    #search-form label, #search-form input, #search-form textarea{
+        border: none;
+        width: 100%; 
+        margin: 10px 0;
+        padding: 5px;
+        font-family: 'Roboto', sans-serif;
+    }
+    #search-form input, #search-form textarea{
+        padding: 20px;
+    }
+    #search-form input:focus{
+        outline: white;
+    }
+    #search-form button{
+        height: 44px;
+        background-color: white;
+        color: #FFC000;
+        border-radius: 24px;
+        padding: 14px 50px;
+        border: none;
+        transition: 0.3s;
+    }
+    #search-form button:hover{
+        padding: 11px 47px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
     header h1{
         width: 554px;
         height: 90px;

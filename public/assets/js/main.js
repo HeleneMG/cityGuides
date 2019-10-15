@@ -36,6 +36,13 @@ ScrollReveal().reveal('#contact-form', {
     delay: 200,
     reset: true
 });
+ScrollReveal().reveal('#search-form', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '20px',
+    delay: 200,
+    reset: true
+});
 
 //NAVBAR+TOTOP
 window.onscroll = function () { fixedNavbar(), scrollFunction() };

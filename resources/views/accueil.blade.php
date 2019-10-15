@@ -18,6 +18,7 @@
         <div id="app1">
             <header>
                 <div class="fond-noir">
+
                     <div class="close">
                         <p><a href="#search">x</a></p>
                     </div>
@@ -46,20 +47,44 @@
                             </ul>
                         </div>
                     </nav>
-                    <div class="titres">
-                        <h1>City Guides</h1>
-                        <h2>GUIDE AND VISIT !</h2>
-                    </div>
 
-                    <div class="inscription">
-                        <button><a href="#">INSCRIPTION</a></button>
-                    </div>
+                    <div class="flexsearch">
+                        <form action="" id="search-form">
+                            <label>
+                                <span>Où ?</span>
+                                <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
+                                <input type="text" name="nom" required placeholder="entrez une localité" autofocus>
+                            </label>
 
-                    <div class="login">
-                        <h3><b>Déjà Inscrit.e ?</b></h3>
-                        <button><a href="<?php echo url('/espace-membre') ?>">Connexion</a></button>
-                    </div>
+                            <label>
+                                <span>Du</span>
+                                <input type="date" name="date" required placeholder="Quand partez-vous?">
+                            </label>
+                            <label>
+                                <span>Au</span>
+                                <input type="date" name="date" required placeholder="Quand partez-vous?">
+                            </label>
 
+                            <!-- message confirmation vueJS-->
+                            <button type="submit">C'est parti !</button>
+                        </form>
+
+                        <div class="flextitres">
+                            <div class="titres">
+                                <h1>City Guides</h1>
+                                <h2>GUIDE AND VISIT !</h2>
+                            </div>
+
+                            <div class="inscription">
+                                <button><a href="#">INSCRIPTION</a></button>
+                            </div>
+
+                            <div class="login">
+                                <h3><b>Déjà Inscrit.e ?</b></h3>
+                                <button><a href="<?php echo url('/espace-membre') ?>">Connexion</a></button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="fleche">
                         <a href="#main"><i class="material-icons md-36">arrow_downward</i></a>
                     </div>
@@ -68,7 +93,7 @@
 
             <main id="main">
 
-                <section class="recherche" id="search">
+                <!--<section class="recherche" id="search">
                     <h3>Où ?</h3>
                     <div class="search" >
                         <label><input type="text"></label>
@@ -80,7 +105,7 @@
                         <a href="#"><i class="material-icons">search</i></a>
                     </div>
 
-                </section>
+                </section>-->
 
                 <section class="annonces" id="annonces">
                     <div class="carte">
