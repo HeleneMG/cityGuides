@@ -49,20 +49,20 @@
                     </nav>
 
                     <div class="flexsearch">
-                        <form action="" id="search-form">
+                        <form action="" id="search-form" class="desktop">
                             <label>
                                 <span>Où ?</span>
                                 <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                                <input type="text" name="nom" required placeholder="entrez une localité" autofocus>
+                                <input type="text" name="ville" placeholder="entrez une localité" autofocus>
                             </label>
 
                             <label>
                                 <span>Du</span>
-                                <input type="date" name="date" required placeholder="Quand partez-vous?">
+                                <input type="date" name="dateDebut" placeholder="Quand partez-vous?">
                             </label>
                             <label>
                                 <span>Au</span>
-                                <input type="date" name="date" required placeholder="Quand partez-vous?">
+                                <input type="date" name="dateFin" placeholder="Quand partez-vous?">
                             </label>
 
                             <!-- message confirmation vueJS-->
@@ -93,19 +93,27 @@
 
             <main id="main">
 
-                <!--<section class="recherche" id="search">
-                    <h3>Où ?</h3>
-                    <div class="search" >
-                        <label><input type="text"></label>
-                        <a href="#"><i class="material-icons">search</i></a>
-                    </div>
-                    <h3>Quand ?</h3>
-                    <div class="search" id="search">
-                        <label><input type="date"></label>
-                        <a href="#"><i class="material-icons">search</i></a>
-                    </div>
+                <section class="recherche">
+                    <form action="" id="search-form" class="mobile">
+                        <label>
+                            <span>Où ?</span>
+                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
+                            <input type="text" name="ville" placeholder="entrez une localité" autofocus>
+                        </label>
 
-                </section>-->
+                        <label>
+                            <span>Du</span>
+                            <input type="date" name="dateDebut" placeholder="Début du séjour">
+                        </label>
+                        <label>
+                            <span>Au</span>
+                            <input type="date" name="dateFin" placeholder="Fin du séjour">
+                        </label>
+
+                        <!-- message confirmation vueJS-->
+                        <button type="submit">C'est parti !</button>
+                    </form>
+                </section>
 
                 <section class="annonces" id="annonces">
                     <div class="carte">
