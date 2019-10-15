@@ -86,6 +86,9 @@ $(document).ready(function () {
         $(".menuHamb").on("click", function () {
             $(".menuNav").toggle(200);
         })
+        $(".arrow-back").on('click', function () {
+            $(".menuNav").toggle(200);
+        })
     })
 })
 

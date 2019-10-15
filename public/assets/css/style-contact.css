@@ -57,13 +57,24 @@ h3{
 }
 .menuNav{
     width: 100%;
+    margin: 20px auto;
+    padding:10px;
+    text-align: center;
     background-color: #FFC000;
     z-index: 3;
     color: black;
     list-style: none;
+    position: absolute;
+    top: -20px;
+    left: 0;
 }
 .menuHamb:hover{
     cursor: pointer;
+}
+.material-icons.md-18.arrow-back { 
+    color: white;
+    position: absolute;
+    left: 11px;
 }
 
 /*FORMULAIRE CONTACT*/
@@ -75,7 +86,7 @@ h3{
 }
 #contact-form{
     width: 90%;
-    height: 90vh;
+    height: 100vh;
     margin: 10px auto;
     padding: 10px;
     background-color:#FFC000;

@@ -21,9 +21,10 @@
                     <div class="entete hamburger">
                         <i class="material-icons menuHamb">menu</i>
                         <ul class="menuNav">
+                            <i class="material-icons md-18 arrow-back">arrow_back</i>
                             <li><a href="<?php echo url('/') ?>">Accueil</a></li>
                             <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
-                            <li></li>
+                            <li><a href="<?php echo url('/espace-annonces') ?>">Annonces</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                         </ul>
                         <h3>CityGuides</h3>
