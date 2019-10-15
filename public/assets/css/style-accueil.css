@@ -311,13 +311,13 @@ footer ul{
 
     .flextitres{
         width: 50%;
-        margin-right: 150px;
+        margin-right: 170px;
     }
     
     #search-form{
         width: 25%;
         height: 72vh;
-        margin: auto;
+        margin: 0px auto;
         padding: 10px;
         background-color:#FFC000;
         display: flex;

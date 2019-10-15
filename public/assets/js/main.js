@@ -39,7 +39,7 @@ ScrollReveal().reveal('#contact-form', {
 ScrollReveal().reveal('#search-form', {
     duration: 1000,
     origin: 'bottom',
-    distance: '20px',
+    distance: '30px',
     delay: 200,
     reset: true
 });
