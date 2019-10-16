@@ -48,21 +48,25 @@
             <main id="main">
                 <section class="contact">
                     <h3>Formulaire de contact</h3>
-                    <form id="contact-form">
+                    <form id="contact-form" action="contact/store" method= "POST">
                         <label>
                             <span>Nom</span>
                             <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="nom" required placeholder="entrez votre nom">
+                            <input type="text" name="contact-nom" required placeholder="entrez votre nom">
                         </label>
-
+                        <label>
+                            <span>Prénom</span>
+                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
+                            <input type="text" name="contact-prenom" required placeholder="entrez votre nom">
+                        </label>
                         <label>
                             <span>Email</span>
-                            <input type="email" name="email" required placeholder="entrez votre email">
+                            <input type="email" name="contact-email" required placeholder="entrez votre email">
                         </label>
 
                         <label>
                             <span>Message</span>
-                            <textarea name="message" cols="10" rows="5" required placeholder="entrez votre message"></textarea>
+                            <textarea name="contact-message" cols="10" rows="5" required placeholder="entrez votre message"></textarea>
                         </label>
 
                         <!-- message confirmation vueJS-->

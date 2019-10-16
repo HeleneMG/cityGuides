@@ -46,8 +46,29 @@
             </header>
 
             <main id="main">
-                <section class="membre">
-                    
+                <section class="contact">
+                    <h3>Mon Espace Membre</h3>
+                    <form id="membre-form">
+                        <label>
+                            <span>Nom</span>
+                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
+                            <input type="text" name="nom" required placeholder="entrez votre nom">
+                        </label>
+
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" required placeholder="entrez votre email">
+                        </label>
+
+                        <label>
+                            <span>Message</span>
+                            <textarea name="message" cols="10" rows="5" required placeholder="entrez votre message"></textarea>
+                        </label>
+
+                        <!-- message confirmation vueJS-->
+                        <button type="submit">Envoyer</button>
+
+                    </form>
                 </section>
             </main>
 

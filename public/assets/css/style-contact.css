@@ -91,7 +91,7 @@ h3{
 }
 #contact-form{
     width: 90%;
-    height: 100vh;
+    height: 123vh;
     margin: 10px auto;
     padding: 10px;
     background-color:#FFC000;
@@ -216,7 +216,7 @@ footer ul{
     /*CONTACT FORM*/
     #contact-form{
         width: 30%;
-        height: 80vh;
+        height: 98vh;
     }
 
     /*FOOTER*/

@@ -337,7 +337,8 @@ footer ul{
 
     .flexsearch{
         display: flex;
-        width: 100%;
+        width: 90%;
+        margin: auto;    
     }
 
     .flextitres{
@@ -352,7 +353,7 @@ footer ul{
         width: 25%;
         height: 60vh;
         min-height: 376px;
-        margin: 34px auto;
+        margin: 72px auto 0;
         padding: 10px;
         background-color:rgb(255, 191, 0);
         display: flex;

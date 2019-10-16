@@ -55,6 +55,7 @@ var sticky = entete.offsetTop;
 function fixedNavbar() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         entete.classList.add("sticky");
+    
     } else {
         entete.classList.remove("sticky");
     }

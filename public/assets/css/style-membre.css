@@ -91,7 +91,7 @@ h3{
 }
 #contact-form{
     width: 90%;
-    height: 90vh;
+    height: 100vh;
     margin: 10px auto;
     padding: 10px;
     background-color:#FFC000;
@@ -100,12 +100,12 @@ h3{
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.116);
-    border-radius: 10px;
-
+    border-radius: 50px;
+    text-align: center;
 }
 #contact-form label, #contact-form input, #contact-form textarea{
     border: none;
-    width: 100%; 
+    width: 95%; 
     margin: 10px 0;
     padding: 5px;
     font-family: 'Roboto', sans-serif;
@@ -117,15 +117,18 @@ h3{
     outline: white;
 }
 #contact-form button{
+    height: 44px;
     background-color: white;
     color: #FFC000;
     border-radius: 24px;
     padding: 14px 50px;
     border: none;
+    transition: 0.3s;
 }
 #contact-form button:hover{
     padding: 11px 47px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 /*FOOTER*/
