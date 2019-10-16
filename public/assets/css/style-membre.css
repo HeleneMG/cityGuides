@@ -82,16 +82,15 @@ h3{
     top: 3px;
 }
 
-/*FORMULAIRE CONTACT*/
-.contact h3{
+/*FORMULAIRE membre*/
+.membre h3{
     padding: 20px 0;
     text-align: center ;
     color: #b0bec5;
     font-family: 'Montserrat';
 }
-#contact-form{
-    width: 90%;
-    height: 100vh;
+#membre-form{
+    width: 97%;
     margin: 10px auto;
     padding: 10px;
     background-color:#FFC000;
@@ -100,23 +99,29 @@ h3{
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.116);
-    border-radius: 50px;
-    text-align: center;
+    text-align: start;
 }
-#contact-form label, #contact-form input, #contact-form textarea{
+
+#membre-form span{
+    font-size: 13px;
+}
+
+#membre-form label, #membre-form input, #membre-form textarea{
     border: none;
-    width: 95%; 
+    width: 100%; 
     margin: 10px 0;
-    padding: 5px;
     font-family: 'Roboto', sans-serif;
 }
-#contact-form input, #contact-form textarea{
-    padding: 20px;
+
+#membre-form input, #membre-form textarea{
+    padding: 9px;
 }
-#contact-form input:focus{
+
+#membre-form input:focus{
     outline: white;
 }
-#contact-form button{
+
+#membre-form button{
     height: 44px;
     background-color: white;
     color: #FFC000;
@@ -125,10 +130,23 @@ h3{
     border: none;
     transition: 0.3s;
 }
-#contact-form button:hover{
+
+#membre-form button:hover{
     padding: 11px 47px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+/*INPUTS RADIO*/
+.radio{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.radio input{
+    width: 10px;
 }
 
 /*FOOTER*/
@@ -213,10 +231,10 @@ footer ul{
         font-size: 22px;
     }
 
-    /*CONTACT FORM*/
-    #contact-form{
+    /*membre FORM*/
+    #membre-form{
         width: 30%;
-        height: 80vh;
+        height: 98vh;
     }
 
     /*FOOTER*/

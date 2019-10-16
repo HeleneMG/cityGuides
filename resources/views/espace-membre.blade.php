@@ -21,7 +21,7 @@
                     <div class="entete hamburger">
                         <i class="material-icons menuHamb">menu</i>
                         <ul class="menuNav">
-                            <i class="material-icons menuHamb">menu</i>
+                            <i class="material-icons md-18 arrow-back">arrow_back</i>
                             <li><a href="<?php echo url('/') ?>">Accueil</a></li>
                             <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
                             <li><a href="<?php echo url('/espace-annonces') ?>">Annonces</a></li>
@@ -46,27 +46,90 @@
             </header>
 
             <main id="main">
-                <section class="contact">
-                    <h3>Mon Espace Membre</h3>
-                    <form id="membre-form">
+                <section class="membre">
+                    <h3>Espace Membre</h3>
+                    <form id="membre-form" action="/store" method="POST">
                         <label>
                             <span>Nom</span>
                             <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="nom" required placeholder="entrez votre nom">
+                            <input type="text" name="" required placeholder="" autofocus>
                         </label>
-
+                        <label>
+                            <span>Prénom</span>
+                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
+                            <input type="text" name="" required placeholder="">
+                        </label>
                         <label>
                             <span>Email</span>
-                            <input type="email" name="email" required placeholder="entrez votre email">
+                            <input type="email" name="" required placeholder="">
                         </label>
 
                         <label>
-                            <span>Message</span>
-                            <textarea name="message" cols="10" rows="5" required placeholder="entrez votre message"></textarea>
+                            <span>Date de naissance</span>
+                            <input type="date" name="dateNaissance">
                         </label>
 
-                        <!-- message confirmation vueJS-->
-                        <button type="submit">Envoyer</button>
+                        <div class="radio">
+                            <span>Sexe</span>
+                            <label>
+                                <span>H</span>
+                                <input type="radio" name="genre" id="madame" value="madame">
+                            </label>
+                            <label>
+                                <span>F</span>
+                                <input type="radio" name="genre" id="monsieur" value="monsieur">
+                            </label>
+                        </div>
+
+                        <label>
+                            <span>Adresse</span>
+                            <input type="text" name="" required placeholder="">
+                        </label>
+
+                        <label>
+                            <span>Code postal</span>
+                            <input type="text" name="" required placeholder="">
+                        </label>
+
+                        <label>
+                            <span>Ville</span>
+                            <input type="text" name="" required placeholder="">
+                        </label>
+
+                        <label>
+                            <span>Pays</span>
+                            <input type="text" name="" required placeholder="">
+                        </label>
+
+                        <label>
+                            <span>Ma minibio</span>
+                            <textarea name="" cols="10" rows="5" required placeholder=""></textarea>
+                        </label>
+
+                        <div class="radio">
+                            <span>Je veux guider</span>
+                            <label>
+                                <span>Oui</span>
+                                <input type="radio" name="guider" id="oui" value="oui">
+                            </label>
+
+                            <label>
+                                <span>Non</span>
+                                <input type="radio" name="guider" id="non" value="non">
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <span>Ma connaissance de la ville</span>
+                            <label>
+                                <span>Excellente</span>
+                                <input type="radio" name="genre" id="madame" value="madame">
+                            </label>
+                            <label>
+                                <span>Bonne</span>
+                                <input type="radio" name="genre" id="monsieur" value="monsieur">
+                            </label>
+                        </div>
 
                     </form>
                 </section>
