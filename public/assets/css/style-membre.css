@@ -138,12 +138,10 @@ h3{
 }
 
 /*INPUTS RADIO*/
-#radio-ville{
+#radio-ville, #membre-form .radio{
     width: 95%;
 }
-#membre-form .radio{
-    width: 95%;  
-}
+
 
 #membre-form .radio input, #membre-form .radio label{
     width: 10px;
@@ -259,6 +257,9 @@ footer ul{
     #membre-form label{
         width: 88%;
         margin: 10px auto;
+    }
+        #radio-ville, #membre-form .radio{
+        width: 88%;
     }
 
     /*FOOTER*/

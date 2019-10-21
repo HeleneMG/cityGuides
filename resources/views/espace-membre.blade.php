@@ -118,33 +118,33 @@
                                 <input type="radio" name="guider" id="non" value="non">
                             </label>
                         </div>
-                        
+
                         <div id="radio-ville">
                             <span>Je connais la ville : </span>
                             <div class="radio ville">
-                            <label>
-                                <span>Comme ma poche</span>
-                                <input type="radio" name="connaissanceVille" id="cinq" value="cinq">                               
-                            </label>
-                            <label>
-                                <span>Très bien</span>
-                                <input type="radio" name="connaissanceVille" id="quatre" value="quatre">                                
-                            </label>
-                            <label>
-                                <span>Bien</span>
-                                <input type="radio" name="connaissanceVille" id="trois" value="trois">                               
-                            </label>
-                            <label class="col2">
-                                <span>Un peu</span>
-                                <input type="radio" name="connaissanceVille" id="deux" value="deux">                               
-                            </label>
-                            <label class="col2">
-                                <span>Pas du tout</span>
-                                <input type="radio" name="connaissanceVille" id="un" value="un">                               
-                            </label>
+                                <label>
+                                    <span>Comme ma poche</span>
+                                    <input type="radio" name="connaissanceVille" id="cinq" value="cinq">
+                                </label>
+                                <label>
+                                    <span>Très bien</span>
+                                    <input type="radio" name="connaissanceVille" id="quatre" value="quatre">
+                                </label>
+                                <label>
+                                    <span>Bien</span>
+                                    <input type="radio" name="connaissanceVille" id="trois" value="trois">
+                                </label>
+                                <label class="col2">
+                                    <span>Un peu</span>
+                                    <input type="radio" name="connaissanceVille" id="deux" value="deux">
+                                </label>
+                                <label class="col2">
+                                    <span>Pas du tout</span>
+                                    <input type="radio" name="connaissanceVille" id="un" value="un">
+                                </label>
                             </div>
                         </div>
-
+                        @csrf
                     </form>
 
                     <h3>Mes annonces</h3>

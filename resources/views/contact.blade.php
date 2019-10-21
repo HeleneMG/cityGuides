@@ -46,18 +46,18 @@
             </header>
 
             <main id="main">
-                <section class="contact">
+                <section class="contact"> 
                     <h3>Formulaire de contact</h3>
                     <form id="contact-form" action="contact/store" method= "POST">
                         <label>
                             <span>Nom</span>
                             <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="contact-nom" required placeholder="entrez votre nom">
+                            <input type="text" name="contact-nom" required placeholder="entrez votre nom" autofocus>
                         </label>
                         <label>
                             <span>Prénom</span>
                             <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="contact-prenom" required placeholder="entrez votre nom">
+                            <input type="text" name="contact-prenom" required placeholder="entrez votre prénom">
                         </label>
                         <label>
                             <span>Email</span>

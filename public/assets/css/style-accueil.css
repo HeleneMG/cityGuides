@@ -169,6 +169,21 @@ h3{
     align-items: center;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.116);
 }
+.input-daterange {
+    width: 90%;
+    position: relative;
+}
+.input-group{
+    display: block;
+}
+.input-group .form-control{
+    border-radius: 0;
+}
+.input-daterange .input-group-addon {
+    background-color: #eeeeee00;
+    border: none;
+    margin : 0;
+}
 
 #search-form label, #search-form input, #search-form textarea, #search-form span{
     width: 95%;
@@ -328,8 +343,8 @@ footer ul{
     #main{
         padding: 18px 0;
     }
-    .close a{
-        color:rgba(15, 15, 15, 0);
+    .close{
+        display: none;    
     }
     header{
         height: 100%;
@@ -350,10 +365,10 @@ footer ul{
     }
     #search-form.desktop{
         display: block;
-        width: 25%;
+        width: 55%;
         height: 60vh;
         min-height: 376px;
-        margin: 72px auto 0;
+        margin: 44px auto 0;
         padding: 10px;
         background-color:rgb(255, 191, 0);
         display: flex;
@@ -364,15 +379,11 @@ footer ul{
         border-radius: 50px;
     }
 
-    #search-form label, #search-form input, #search-form textarea{
-        padding: 5px;
-    }
-    #search-form input, #search-form textarea{
-        padding: 20px;
+    #search-form input, #search-form label{
+        padding: 8px;
     }
     #search-form button{
         height: 44px;
-        padding: 14px 50px;
     }
 
     header h1{

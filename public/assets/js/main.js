@@ -93,6 +93,13 @@ $(document).ready(function () {
     })
 })
 
+//DATEPICKER
+$(document).ready(function () {
+    $('.input-daterange input').each(function () {
+        $(this).datepicker('clearDates');
+    });
+})
+
 //VUEJS
 /*var app = new Vue({
     el: '#app',
