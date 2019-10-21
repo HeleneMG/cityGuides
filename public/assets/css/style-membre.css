@@ -138,17 +138,35 @@ h3{
 }
 
 /*INPUTS RADIO*/
-.radio{
+#radio-ville, #membre-form .radio{
     width: 95%;
-    display: flex;
-    flex-direction: row;
-    
 }
 
-.radio input{
+
+#membre-form .radio input, #membre-form .radio label{
     width: 10px;
+    font-size: 8px;
+    margin-left: 10px; 
 }
 
+#membre-form .ville{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 110px;
+    text-align: end;
+}
+
+#membre-form .ville label{
+    width: 50%;
+}
+#membre-form .ville input{
+    width: 20px;
+    margin: auto;
+}
+#membre-form .ville .col2{
+    width: 34%;
+}
 /*FOOTER*/
 footer{
     height: 20vh;
@@ -234,7 +252,14 @@ footer ul{
     /*membre FORM*/
     #membre-form{
         width: 30%;
-        height: 98vh;
+        border-radius: 50px;
+    }
+    #membre-form label{
+        width: 88%;
+        margin: 10px auto;
+    }
+        #radio-ville, #membre-form .radio{
+        width: 88%;
     }
 
     /*FOOTER*/

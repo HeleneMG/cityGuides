@@ -7,9 +7,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
         <link rel="icon" type="image/png" href="assets/img/logo2.png" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat|Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
         <link rel="stylesheet" href="<?php echo url('/assets/css/style-accueil.css') ?>">
         <title>Accueil - CityGuides</title>
     </head>
@@ -23,7 +28,7 @@
                         <p><a href="#search-form.mobile">x</a></p>
                     </div>
 
-                    
+
                     <nav>
                         <div class="entete hamburger">
                             <i class="material-icons menuHamb">menu</i>
@@ -52,25 +57,24 @@
                     </nav>
 
                     <div class="flexsearch">
-                        <form action="" id="search-form" class="desktop">
-                            <label>
-                                <span>Où ?</span>
-                                <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                                <input type="text" name="ville" placeholder="entrez une localité" autofocus>
-                            </label>
+                        <div class="bootstrap-iso">
+                            <form action="" id="search-form" class="desktop" method="POST">
+                                <label>
+                                    <span>Où ?</span>
+                                    <input type="text" name="ville" placeholder="entrez une localité" autofocus>
+                                </label>
 
-                            <label>
-                                <span>Du</span>
-                                <input type="date" name="dateDebut" placeholder="Quand partez-vous?">
-                            </label>
-                            <label>
-                                <span>Au</span>
-                                <input type="date" name="dateFin" placeholder="Quand partez-vous?">
-                            </label>
+                                <div class="input-group input-daterange">
+                                    <div class="input-group-addon">De</div>
+                                    <input type="text" class="form-control" autocomplete="off">
+                                    <div class="input-group-addon">à</div>
+                                    <input type="text" class="form-control" autocomplete="off">
+                                </div>
 
-                            <!-- message confirmation vueJS-->
-                            <button type="submit">C'est parti !</button>
-                        </form>
+                                <button name="submit" type="submit">C'est parti !</button>
+                                @csrf
+                            </form>
+                        </div>
 
                         <div class="flextitres">
                             <div class="titres">
@@ -101,17 +105,14 @@
                         <label>
                             <span>Où ?</span>
                             <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="ville" placeholder="entrez une localité" >
+                            <input type="text" name="ville" placeholder="entrez une localité">
                         </label>
 
-                        <label>
-                            <span>Du</span>
-                            <input type="date" name="dateDebut" placeholder="Début du séjour">
-                        </label>
-                        <label>
-                            <span>Au</span>
-                            <input type="date" name="dateFin" placeholder="Fin du séjour">
-                        </label>
+                        <div class="input-group input-daterange">
+                            <input type="text" class="form-control" autocomplete="off">
+                            <div class="input-group-addon">to</div>
+                            <input type="text" class="form-control" autocomplete="off">
+                        </div>
 
                         <!-- message confirmation vueJS-->
                         <button type="submit">C'est parti !</button>

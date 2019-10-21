@@ -47,7 +47,7 @@
 
             <main id="main">
                 <section class="membre">
-                    <h3>Espace Membre</h3>
+                    <h3>Mes informations</h3>
                     <form id="membre-form" action="/store" method="POST">
                         <label>
                             <span>Nom</span>
@@ -70,7 +70,7 @@
                         </label>
 
                         <div class="radio">
-                            <span>Sexe</span>
+                            <span>Sexe : </span>
                             <label>
                                 <span>H</span>
                                 <input type="radio" name="genre" id="madame" value="madame">
@@ -107,7 +107,7 @@
                         </label>
 
                         <div class="radio">
-                            <span>Je veux guider</span>
+                            <span>Je veux guider : </span>
                             <label>
                                 <span>Oui</span>
                                 <input type="radio" name="guider" id="oui" value="oui">
@@ -119,19 +119,35 @@
                             </label>
                         </div>
 
-                        <div class="radio">
-                            <span>Ma connaissance de la ville</span>
-                            <label>
-                                <span>Excellente</span>
-                                <input type="radio" name="genre" id="madame" value="madame">
-                            </label>
-                            <label>
-                                <span>Bonne</span>
-                                <input type="radio" name="genre" id="monsieur" value="monsieur">
-                            </label>
+                        <div id="radio-ville">
+                            <span>Je connais la ville : </span>
+                            <div class="radio ville">
+                                <label>
+                                    <span>Comme ma poche</span>
+                                    <input type="radio" name="connaissanceVille" id="cinq" value="cinq">
+                                </label>
+                                <label>
+                                    <span>Très bien</span>
+                                    <input type="radio" name="connaissanceVille" id="quatre" value="quatre">
+                                </label>
+                                <label>
+                                    <span>Bien</span>
+                                    <input type="radio" name="connaissanceVille" id="trois" value="trois">
+                                </label>
+                                <label class="col2">
+                                    <span>Un peu</span>
+                                    <input type="radio" name="connaissanceVille" id="deux" value="deux">
+                                </label>
+                                <label class="col2">
+                                    <span>Pas du tout</span>
+                                    <input type="radio" name="connaissanceVille" id="un" value="un">
+                                </label>
+                            </div>
                         </div>
-
+                        @csrf
                     </form>
+
+                    <h3>Mes annonces</h3>
                 </section>
             </main>
 
