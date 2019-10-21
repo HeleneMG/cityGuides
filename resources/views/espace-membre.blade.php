@@ -146,8 +146,46 @@
                         </div>
                         @csrf
                     </form>
+                </section>
 
+                
+                <section class="annonces" id="annonces">
                     <h3>Mes annonces</h3>
+                    <div class="carte">
+                        <img src="assets/img/lepanier.jpg" alt="le panier">
+                        <div class="contenu">
+                            <h3>Visite du quartier du Panier</h3>
+                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                        </div>
+                        <div class="reserver">
+                            <h4>Samedi 22 mai à 14h</h4>
+                            <button><a href="#">Go !</a></button>
+                        </div>
+                    </div>
+
+                    <div class="carte">
+                        <img src="assets/img/lepanier.jpg" alt="le panier">
+                        <div class="contenu">
+                            <h3>Visite du quartier du Panier</h3>
+                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                        </div>
+                        <div class="reserver">
+                            <h4>Samedi 22 mai à 14h</h4>
+                            <button><a href="#">Go !</a></button>
+                        </div>
+                    </div>
+
+                    <div class="carte">
+                        <img src="assets/img/lepanier.jpg" alt="le panier">
+                        <div class="contenu">
+                            <h3>Visite du quartier du Panier</h3>
+                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                        </div>
+                        <div class="reserver">
+                            <h4>Samedi 22 mai à 14h</h4>
+                            <button><a href="#">Go !</a></button>
+                        </div>
+                    </div>
                 </section>
             </main>
 
