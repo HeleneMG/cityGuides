@@ -83,7 +83,7 @@ h3{
 }
 
 /*FORMULAIRE membre*/
-.membre h3{
+.membre h3, .annonces H3{
     padding: 20px 0;
     text-align: center ;
     color: #b0bec5;
@@ -167,6 +167,60 @@ h3{
 #membre-form .ville .col2{
     width: 34%;
 }
+
+/*ANNONCES*/
+.annonces{
+    width: 100%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.carte{
+    width: calc(90% /2);
+    margin: 8px auto;
+    background-color: white;
+    color: black;
+    border: solid 1px rgba(192, 192, 192, 0.295);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+.carte img{
+    width: 100%;
+    height: 88px;
+    margin: auto;
+    object-fit: cover;
+}
+.contenu{
+    padding: 5px 8px 0;
+}
+.contenu h3{
+    text-align: start;
+    color: #b0bec5;
+    font-family: 'Montserrat';
+    font-size: 13px;
+}
+.contenu p{
+    font-size: 8px;
+}
+.reserver{
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 8px 4px;
+}
+.reserver h4{
+    margin: 5px 3px;
+    font-size: 11px;
+}
+.reserver button{
+    min-width: 36px;
+    height: 36px;
+    border-radius: 49%;
+    padding: 10px;
+    border: none;
+    background-color: #FFC000;
+    color: white;
+    font-size: 8px;
+}
 /*FOOTER*/
 footer{
     height: 20vh;
@@ -203,6 +257,40 @@ footer ul{
     background-color: white;
     border-radius: 18px;
     border: solid thin rgba(255, 191, 0, 0.342);
+}
+
+@media screen and (min-width: 425px){
+
+    .annonces{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .carte img{
+        height: 196px;
+    }
+    .carte{
+        width: calc(90% / 4);
+        min-width: 284px;
+    }
+    .contenu {
+        padding: 13px 20px;
+    }
+    .contenu h3, .reserver h4{
+        font-size: 18px;
+    }
+    .contenu p{
+        font-size: 13px;
+    }
+    .reserver{
+        margin: 13px;
+        align-items: baseline;
+    }
+    .reserver button{
+        width: 46px;
+        height: 46px;
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 769px){
