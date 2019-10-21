@@ -24,3 +24,7 @@ Route::view('/annonces', 'test');
 //paramètre 1 = url utilisée par le navigateur
 //paramètre 2 = template (.blade.php) utilisé pour afficher la page
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
