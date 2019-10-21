@@ -83,12 +83,12 @@
                             </div>
 
                             <div class="inscription">
-                                <button><a href="#">INSCRIPTION</a></button>
+                                <button><a href="<?php echo url('/register') ?>">INSCRIPTION</a></button>
                             </div>
 
                             <div class="login">
                                 <h3><b>Déjà Inscrit.e ?</b></h3>
-                                <button><a href="<?php echo url('/espace-membre') ?>">Connexion</a></button>
+                                <button><a href="<?php echo url('/login') ?>">Connexion</a></button>
                             </div>
                         </div>
                     </div>
