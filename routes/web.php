@@ -23,9 +23,11 @@ Route::view('/espace-annonces', 'templates');
 Route::view('/annonces', 'test');
 Route::view('/login', 'login');
 Route::view('/register', 'register');
+Route::any('/annonce/store', 'AnnonceController@store');
+Route::view('/annonces', 'annonces');
+
 //paramètre 1 = url utilisée par le navigateur
 //paramètre 2 = template (.blade.php) utilisé pour afficher la page
-
 
 Auth::routes();
 

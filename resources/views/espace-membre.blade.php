@@ -46,147 +46,164 @@
             </header>
 
             <main id="main">
-                <section class="membre">
-                    <h3>Mes informations</h3>
-                    <form id="membre-form" action="/store" method="POST">
-                        <label>
-                            <span>Nom</span>
-                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="" required placeholder="" autofocus>
-                        </label>
-                        <label>
-                            <span>Prénom</span>
-                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="" required placeholder="">
-                        </label>
-                        <label>
-                            <span>Email</span>
-                            <input type="email" name="" required placeholder="">
-                        </label>
-
-                        <label>
-                            <span>Date de naissance</span>
-                            <input type="date" name="dateNaissance">
-                        </label>
-
-                        <div class="radio">
-                            <span>Sexe : </span>
+                <div class="flex-membre">
+                    <section class="membre">
+                        <h3>Mes informations</h3>
+                        <form id="membre-form" action="/store" method="POST">
                             <label>
-                                <span>H</span>
-                                <input type="radio" name="genre" id="madame" value="madame">
+                                <span>Nom</span>
+                                <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
+                                <input type="text" name="" required placeholder="" autofocus>
                             </label>
                             <label>
-                                <span>F</span>
-                                <input type="radio" name="genre" id="monsieur" value="monsieur">
+                                <span>Prénom</span>
+                                <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
+                                <input type="text" name="" required placeholder="">
                             </label>
-                        </div>
-
-                        <label>
-                            <span>Adresse</span>
-                            <input type="text" name="" required placeholder="">
-                        </label>
-
-                        <label>
-                            <span>Code postal</span>
-                            <input type="text" name="" required placeholder="">
-                        </label>
-
-                        <label>
-                            <span>Ville</span>
-                            <input type="text" name="" required placeholder="">
-                        </label>
-
-                        <label>
-                            <span>Pays</span>
-                            <input type="text" name="" required placeholder="">
-                        </label>
-
-                        <label>
-                            <span>Ma minibio</span>
-                            <textarea name="" cols="10" rows="5" required placeholder=""></textarea>
-                        </label>
-
-                        <div class="radio">
-                            <span>Je veux guider : </span>
                             <label>
-                                <span>Oui</span>
-                                <input type="radio" name="guider" id="oui" value="oui">
+                                <span>Email</span>
+                                <input type="email" name="" required placeholder="">
                             </label>
 
                             <label>
-                                <span>Non</span>
-                                <input type="radio" name="guider" id="non" value="non">
+                                <span>Date de naissance</span>
+                                <input type="date" name="dateNaissance">
                             </label>
-                        </div>
 
-                        <div id="radio-ville">
-                            <span>Je connais la ville : </span>
-                            <div class="radio ville">
+                            <div class="radio">
+                                <span>Sexe : </span>
                                 <label>
-                                    <span>Comme ma poche</span>
-                                    <input type="radio" name="connaissanceVille" id="cinq" value="cinq">
+                                    <span>H</span>
+                                    <input type="radio" name="genre" id="madame" value="madame">
                                 </label>
                                 <label>
-                                    <span>Très bien</span>
-                                    <input type="radio" name="connaissanceVille" id="quatre" value="quatre">
-                                </label>
-                                <label>
-                                    <span>Bien</span>
-                                    <input type="radio" name="connaissanceVille" id="trois" value="trois">
-                                </label>
-                                <label class="col2">
-                                    <span>Un peu</span>
-                                    <input type="radio" name="connaissanceVille" id="deux" value="deux">
-                                </label>
-                                <label class="col2">
-                                    <span>Pas du tout</span>
-                                    <input type="radio" name="connaissanceVille" id="un" value="un">
+                                    <span>F</span>
+                                    <input type="radio" name="genre" id="monsieur" value="monsieur">
                                 </label>
                             </div>
+
+                            <label>
+                                <span>Adresse</span>
+                                <input type="text" name="" required placeholder="">
+                            </label>
+
+                            <label>
+                                <span>Code postal</span>
+                                <input type="text" name="" required placeholder="">
+                            </label>
+
+                            <label>
+                                <span>Ville</span>
+                                <input type="text" name="" required placeholder="">
+                            </label>
+
+                            <label>
+                                <span>Pays</span>
+                                <input type="text" name="" required placeholder="">
+                            </label>
+
+                            <label>
+                                <span>Ma minibio</span>
+                                <textarea name="" cols="10" rows="5" required placeholder=""></textarea>
+                            </label>
+
+                            <div class="radio">
+                                <span>Je veux guider : </span>
+                                <label>
+                                    <span>Oui</span>
+                                    <input type="radio" name="guider" id="oui" value="oui">
+                                </label>
+
+                                <label>
+                                    <span>Non</span>
+                                    <input type="radio" name="guider" id="non" value="non">
+                                </label>
+                            </div>
+
+                            <div id="radio-ville">
+                                <span>Je connais la ville : </span>
+                                <div class="radio ville">
+                                    <label>
+                                        <span>Comme ma poche</span>
+                                        <input type="radio" name="connaissanceVille" id="cinq" value="cinq">
+                                    </label>
+                                    <label>
+                                        <span>Très bien</span>
+                                        <input type="radio" name="connaissanceVille" id="quatre" value="quatre">
+                                    </label>
+                                    <label>
+                                        <span>Bien</span>
+                                        <input type="radio" name="connaissanceVille" id="trois" value="trois">
+                                    </label>
+                                    <label class="col2">
+                                        <span>Un peu</span>
+                                        <input type="radio" name="connaissanceVille" id="deux" value="deux">
+                                    </label>
+                                    <label class="col2">
+                                        <span>Pas du tout</span>
+                                        <input type="radio" name="connaissanceVille" id="un" value="un">
+                                    </label>
+                                </div>
+                            </div>
+                            @csrf
+                        </form>
+                    </section>
+
+                    <section id="annonces">
+                        <h3>Mes annonces</h3>
+                        <div class="annonces">
+                            <div class="carte">
+                                <img src="assets/img/lepanier.jpg" alt="le panier">
+                                <div class="contenu">
+                                    <h3>Visite du quartier du Panier</h3>
+                                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                                </div>
+                                <div class="reserver">
+                                    <h4>Samedi 22 mai à 14h</h4>
+                                    <button><a href="#">Go !</a></button>
+                                </div>
+                            </div>
+
+                            <div class="carte">
+                                <img src="assets/img/lepanier.jpg" alt="le panier">
+                                <div class="contenu">
+                                    <h3>Visite du quartier du Panier</h3>
+                                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                                </div>
+                                <div class="reserver">
+                                    <h4>Samedi 22 mai à 14h</h4>
+                                    <button><a href="#">Go !</a></button>
+                                </div>
+                            </div>
+
+                            <div class="carte">
+                                <img src="assets/img/lepanier.jpg" alt="le panier">
+                                <div class="contenu">
+                                    <h3>Visite du quartier du Panier</h3>
+                                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                                </div>
+                                <div class="reserver">
+                                    <h4>Samedi 22 mai à 14h</h4>
+                                    <button><a href="#">Go !</a></button>
+                                </div>
+                            </div>
                         </div>
+                    </section>
+                </div>
+                
+                <div class="creation-annonce">
+                    <form method="POST" action="annonce/store">
+                    <input type="text" name="photo" required placeholder="entrez votre URL DE photo">
+                        <input type="text" name="titre" required placeholder="entrez votre titre">
+                        <textarea name="contenu" required placeholder="entrez votre contenu"></textarea>                      
+                        <input type="text" name="ville" required placeholder="entrez la ville">
+                        <input type="text" name="date" required placeholder="entrez la date">
+                        <input type="text" name="heure" required placeholder="entrez l'heure'">
+                        <button type="submit">PUBLIER UNE ANNONCE</button>
+                        <!-- RACCOURCI BLADE POUR AJOUTER UN CHAMP HIDDEN -->
                         @csrf
                     </form>
-                </section>
-
-                
-                <section class="annonces" id="annonces">
-                    <h3>Mes annonces</h3>
-                    <div class="carte">
-                        <img src="assets/img/lepanier.jpg" alt="le panier">
-                        <div class="contenu">
-                            <h3>Visite du quartier du Panier</h3>
-                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
-                        </div>
-                        <div class="reserver">
-                            <h4>Samedi 22 mai à 14h</h4>
-                            <button><a href="#">Go !</a></button>
-                        </div>
-                    </div>
-
-                    <div class="carte">
-                        <img src="assets/img/lepanier.jpg" alt="le panier">
-                        <div class="contenu">
-                            <h3>Visite du quartier du Panier</h3>
-                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
-                        </div>
-                        <div class="reserver">
-                            <h4>Samedi 22 mai à 14h</h4>
-                            <button><a href="#">Go !</a></button>
-                        </div>
-                    </div>
-
-                    <div class="carte">
-                        <img src="assets/img/lepanier.jpg" alt="le panier">
-                        <div class="contenu">
-                            <h3>Visite du quartier du Panier</h3>
-                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
-                        </div>
-                        <div class="reserver">
-                            <h4>Samedi 22 mai à 14h</h4>
-                            <button><a href="#">Go !</a></button>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </main>
 
             <footer>

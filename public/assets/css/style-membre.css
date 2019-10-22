@@ -83,7 +83,7 @@ h3{
 }
 
 /*FORMULAIRE membre*/
-.membre h3, .annonces H3{
+.flex-membre h3{
     padding: 20px 0;
     text-align: center ;
     color: #b0bec5;
@@ -338,8 +338,18 @@ footer ul{
     }
 
     /*membre FORM*/
+    .flex-membre{
+        display: flex;
+        width: 100%;
+    }
+    .membre{
+        width: 50%;
+    }
+    #annonces{
+        width: 50%;
+    }
     #membre-form{
-        width: 30%;
+        width: 50%;
         border-radius: 50px;
     }
     #membre-form label{

@@ -120,14 +120,39 @@
                 </section>
 
                 <section class="annonces" id="annonces">
+
+<?php
+$tabAnnonce = \App\Annonce::latest("updated_at")->get();
+
+foreach($tabAnnonce as $annonce)
+{
+    echo
+<<<CODEHTML
+<div class="carte">
+    <img src="{$annonce->image}" alt="{$annonce->image}">
+    <div class="contenu">
+        <h3>{$annonce->titre}</h3>
+        <p>{$annonce->contenu}</p>
+        <h5>{$annonce->id}</h5>
+    </div>
+    <div class="reserver">
+        <h4>{$annonce->date}</h4>
+        <h5>{$annonce->heure}</h5>
+        <button><a href="#">Go !</a></button>
+    </div>
+</div>
+CODEHTML;
+}
+?>
                     <div class="carte">
                         <img src="assets/img/lepanier.jpg" alt="le panier">
                         <div class="contenu">
-                            <h3>Visite du quartier du Panier</h3>
-                            <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
+                            <h3>{$annonce->titre}</h3>
+                            <p>{$annonce->contenu}</p>
+                            <h5>{$annonce->id}</h5>
                         </div>
                         <div class="reserver">
-                            <h4>Samedi 22 mai à 14h</h4>
+                            <h4>{$annonce->date}</h4>
                             <button><a href="#">Go !</a></button>
                         </div>
                     </div>
