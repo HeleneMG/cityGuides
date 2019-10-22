@@ -144,18 +144,6 @@ foreach($tabAnnonce as $annonce)
 CODEHTML;
 }
 ?>
-                    <div class="carte">
-                        <img src="assets/img/lepanier.jpg" alt="le panier">
-                        <div class="contenu">
-                            <h3>{$annonce->titre}</h3>
-                            <p>{$annonce->contenu}</p>
-                            <h5>{$annonce->id}</h5>
-                        </div>
-                        <div class="reserver">
-                            <h4>{$annonce->date}</h4>
-                            <button><a href="#">Go !</a></button>
-                        </div>
-                    </div>
 
                     <div class="carte">
                         <img src="assets/img/lepanier.jpg" alt="le panier">

@@ -150,60 +150,56 @@
                     </section>
 
                     <section id="annonces">
+                        <h3>Créer une annonce</h3>
+                        <div class="creation-annonce">
+                            <form method="POST" action="annonce/store" id="creation-annonce">
+                                <span>Titre</span>
+                                <input type="text" name="titre" required placeholder="entrez votre titre">
+                                <span>Photo</span>
+                                <input type="text" name="photo" required placeholder="entrez votre URL DE photo">
+                                <span>Description</span>
+                                <textarea name="contenu" required placeholder="entrez votre contenu"></textarea>
+                                <span>Ville</span>
+                                <input type="text" name="ville" required placeholder="entrez la ville">
+                                <span>Date</span>
+                                <input type="text" name="date" required placeholder="entrez la date">
+                                <span>Heure</span>
+                                <input type="text" name="heure" required placeholder="entrez l'heure">
+                                <button type="submit">PUBLIER UNE ANNONCE</button>
+                                <!-- RACCOURCI BLADE POUR AJOUTER UN CHAMP HIDDEN -->
+                                @csrf
+                            </form>
+                        </div>
+
                         <h3>Mes annonces</h3>
                         <div class="annonces">
-                            <div class="carte">
-                                <img src="assets/img/lepanier.jpg" alt="le panier">
-                                <div class="contenu">
-                                    <h3>Visite du quartier du Panier</h3>
-                                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
-                                </div>
-                                <div class="reserver">
-                                    <h4>Samedi 22 mai à 14h</h4>
-                                    <button><a href="#">Go !</a></button>
-                                </div>
-                            </div>
+                            <?php
+$tabAnnonce = \App\Annonce::latest("updated_at")->get();
 
-                            <div class="carte">
-                                <img src="assets/img/lepanier.jpg" alt="le panier">
-                                <div class="contenu">
-                                    <h3>Visite du quartier du Panier</h3>
-                                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
-                                </div>
-                                <div class="reserver">
-                                    <h4>Samedi 22 mai à 14h</h4>
-                                    <button><a href="#">Go !</a></button>
-                                </div>
-                            </div>
-
-                            <div class="carte">
-                                <img src="assets/img/lepanier.jpg" alt="le panier">
-                                <div class="contenu">
-                                    <h3>Visite du quartier du Panier</h3>
-                                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius.</p>
-                                </div>
-                                <div class="reserver">
-                                    <h4>Samedi 22 mai à 14h</h4>
-                                    <button><a href="#">Go !</a></button>
-                                </div>
-                            </div>
+foreach($tabAnnonce as $annonce)
+{
+    echo
+<<<CODEHTML
+<div class="carte">
+    <img src="{$annonce->image}" alt="{$annonce->image}">
+    <div class="contenu">
+        <h3>{$annonce->titre}</h3>
+        <p>{$annonce->contenu}</p>
+        <h5>{$annonce->id}</h5>
+    </div>
+    <div class="reserver">
+        <h4>{$annonce->date}</h4>
+        <h5>{$annonce->heure}</h5>
+        <button><a href="#">Go !</a></button>
+    </div>
+</div>
+CODEHTML;
+}
+?>
                         </div>
                     </section>
                 </div>
-                
-                <div class="creation-annonce">
-                    <form method="POST" action="annonce/store">
-                    <input type="text" name="photo" required placeholder="entrez votre URL DE photo">
-                        <input type="text" name="titre" required placeholder="entrez votre titre">
-                        <textarea name="contenu" required placeholder="entrez votre contenu"></textarea>                      
-                        <input type="text" name="ville" required placeholder="entrez la ville">
-                        <input type="text" name="date" required placeholder="entrez la date">
-                        <input type="text" name="heure" required placeholder="entrez l'heure'">
-                        <button type="submit">PUBLIER UNE ANNONCE</button>
-                        <!-- RACCOURCI BLADE POUR AJOUTER UN CHAMP HIDDEN -->
-                        @csrf
-                    </form>
-                </div>
+
             </main>
 
             <footer>
