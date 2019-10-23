@@ -102,9 +102,7 @@ h3{
     text-align: start;
 }
 #creation-annonce {
-    width: 60%;
     padding: 37px;
-    border-radius: 50px;
 }
 #membre-form span, #creation-annonce span{
     font-size: 13px;
@@ -362,6 +360,11 @@ footer ul{
     }
         #radio-ville, #membre-form .radio{
         width: 88%;
+    }
+    #creation-annonce {
+        width: 60%;
+        padding: 37px;
+        border-radius: 50px;
     }
 
     /*FOOTER*/

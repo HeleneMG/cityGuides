@@ -99,7 +99,6 @@ h3{
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.116);
-    border-radius: 50px;
 }
 #contact-form label, #contact-form input, #contact-form textarea{
     border: none;
@@ -214,6 +213,7 @@ footer ul{
     /*CONTACT FORM*/
     #contact-form{
         width: 30%;
+        border-radius: 50px
     }
 
     /*FOOTER*/

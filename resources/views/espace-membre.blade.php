@@ -173,7 +173,7 @@
 
                         <h3>Mes annonces</h3>
                         <div class="annonces">
-                            <?php
+<?php
 $tabAnnonce = \App\Annonce::latest("updated_at")->get();
 
 foreach($tabAnnonce as $annonce)
