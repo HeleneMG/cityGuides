@@ -83,13 +83,13 @@ h3{
 }
 
 /*FORMULAIRE membre*/
-.membre h3, .annonces H3{
+.flex-membre h3{
     padding: 20px 0;
     text-align: center ;
     color: #b0bec5;
     font-family: 'Montserrat';
 }
-#membre-form{
+#membre-form, #creation-annonce{
     width: 97%;
     margin: 10px auto;
     padding: 10px;
@@ -101,27 +101,29 @@ h3{
     box-shadow: 1px 1px rgba(0, 0, 0, 0.116);
     text-align: start;
 }
-
-#membre-form span{
+#creation-annonce {
+    padding: 37px;
+}
+#membre-form span, #creation-annonce span{
     font-size: 13px;
 }
 
-#membre-form label, #membre-form input, #membre-form textarea{
+#membre-form label, #membre-form input, #membre-form textarea, #creation-annonce label, #creation-annonce input, #creation-annonce textarea{
     border: none;
     width: 100%; 
     margin: 10px 0;
     font-family: 'Roboto', sans-serif;
 }
 
-#membre-form input, #membre-form textarea{
+#membre-form input, #membre-form textarea, #creation-annonce input, #creation-annonce textarea{
     padding: 9px;
 }
 
-#membre-form input:focus{
+#membre-form input:focus, #creation-annonce input:focus{
     outline: white;
 }
 
-#membre-form button{
+#membre-form button, #creation-annonce button{
     height: 44px;
     background-color: white;
     color: #FFC000;
@@ -131,7 +133,7 @@ h3{
     transition: 0.3s;
 }
 
-#membre-form button:hover{
+#membre-form button:hover, #creation-annonce button:hover{
     padding: 11px 47px;
     cursor: pointer;
     transition: 0.3s;
@@ -338,8 +340,18 @@ footer ul{
     }
 
     /*membre FORM*/
+    .flex-membre{
+        display: flex;
+        width: 100%;
+    }
+    .membre{
+        width: 50%;
+    }
+    #annonces{
+        width: 50%;
+    }
     #membre-form{
-        width: 30%;
+        width: 60%;
         border-radius: 50px;
     }
     #membre-form label{
@@ -348,6 +360,11 @@ footer ul{
     }
         #radio-ville, #membre-form .radio{
         width: 88%;
+    }
+    #creation-annonce {
+        width: 60%;
+        padding: 37px;
+        border-radius: 50px;
     }
 
     /*FOOTER*/
