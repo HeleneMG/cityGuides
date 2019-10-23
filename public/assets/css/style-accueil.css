@@ -396,9 +396,10 @@ footer ul{
         width: 524px;
         margin: 32px auto 0;
     }
-    header h2{
+   /* header h2{
         padding: 
-    }
+    }*/
+
     .inscription, .login{
         margin: 7em auto;
         font-size: 12px;
