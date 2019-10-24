@@ -26,7 +26,24 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
+
+        public function redirectTo ()
+    {
+        // https://laravel.com/docs/5.8/authentication#retrieving-the-authenticated-user
+        $utilisateurConnecte = Auth::user();
+
+        // CONNECTE COMME MEMBRE (level == 10)
+        if ($utilisateurConnecte != null && $utilisateurConnecte->level == 10)
+        {
+            return '/espace-membre';
+        }
+        // CONNECTE COMME ADMIN (level == 100)
+        if ($utilisateurConnecte != null && $utilisateurConnecte->level == 100)
+        {
+            return '/espace-admin';
+        }        
+    }
 
     /**
      * Create a new controller instance.

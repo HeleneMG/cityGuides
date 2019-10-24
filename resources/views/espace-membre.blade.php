@@ -24,8 +24,10 @@
                             <i class="material-icons md-18 arrow-back">arrow_back</i>
                             <li><a href="<?php echo url('/') ?>">Accueil</a></li>
                             <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
-                            <li><a href="<?php echo url('/espace-annonces') ?>">Annonces</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
+                            <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
+
                         </ul>
                         <h3>CityGuides</h3>
                     </div>
@@ -38,8 +40,10 @@
                             <li><a href="<?php echo url('/') ?>">
                                     <h3>CityGuides</h3>
                                 </a></li>
-                            <li><a href="#">Un autre menu</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
+                            <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
+
                         </ul>
                     </div>
                 </nav>
@@ -158,7 +162,7 @@
                                 <span>Photo</span>
                                 <input type="text" name="photo" required placeholder="entrez votre URL DE photo">
                                 <span>Description</span>
-                                <textarea name="contenu" required placeholder="entrez votre contenu"></textarea>
+                                <textarea name="contenu" required placeholder="entrez votre contenu"  rows="5"></textarea>
                                 <span>Ville</span>
                                 <input type="text" name="ville" required placeholder="entrez la ville">
                                 <span>Date</span>

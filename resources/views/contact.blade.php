@@ -24,8 +24,8 @@
                             <i class="material-icons md-18 arrow-back">arrow_back</i>
                             <li><a href="<?php echo url('/') ?>">Accueil</a></li>
                             <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
-                            <li><a href="<?php echo url('/espace-annonces') ?>">Annonces</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
+                            <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
                         </ul>
                         <h3>CityGuides</h3>
                     </div>
@@ -38,8 +38,8 @@
                             <li><a href="<?php echo url('/') ?>">
                                     <h3>CityGuides</h3>
                                 </a></li>
-                            <li><a href="#">Un autre menu</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
+                            <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -51,27 +51,25 @@
                     <form id="contact-form" action="contact/store" method= "POST">
                         <label>
                             <span>Nom</span>
-                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="contact-nom" required placeholder="entrez votre nom" autofocus>
+                            <input type="text" name="nom" required placeholder="entrez votre nom" autofocus>
                         </label>
                         <label>
                             <span>Prénom</span>
-                            <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
-                            <input type="text" name="contact-prenom" required placeholder="entrez votre prénom">
+                            <input type="text" name="prenom" required placeholder="entrez votre prénom">
                         </label>
                         <label>
                             <span>Email</span>
-                            <input type="email" name="contact-email" required placeholder="entrez votre email">
+                            <input type="email" name="email" required placeholder="entrez votre email">
                         </label>
 
                         <label>
                             <span>Message</span>
-                            <textarea name="contact-message" cols="10" rows="5" required placeholder="entrez votre message"></textarea>
+                            <textarea name="message" cols="10" rows="5" required placeholder="entrez votre message"></textarea>
                         </label>
 
                         <!-- message confirmation vueJS-->
                         <button type="submit">Envoyer</button>
-
+@csrf
                     </form>
                 </section>
             </main>

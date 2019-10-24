@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Route::view('/', 'accueil');
+Route::any('/contact/store', 'contactController@store');
 Route::view('/contact', 'contact');
-Route::view('/espace-membre', 'espace-membre');
 Route::view('/espace-admin', 'espace-admin');
 Route::view('/espace-annonces', 'templates');
 Route::view('/annonces', 'test');
@@ -25,6 +25,10 @@ Route::view('/login', 'login');
 Route::view('/register', 'register');
 Route::any('/annonce/store', 'AnnonceController@store');
 Route::view('/annonces', 'annonces');
+
+//limiter accËs ‡ l'espace memebre au membre connectÈs + logout
+Route::any('/espace-membre', 'AnnonceController@afficherEspaceMembre');
+Route::any('/deconnexion', 'AnnonceController@deconnexion');
 
 //param√®tre 1 = url utilis√©e par le navigateur
 //param√®tre 2 = template (.blade.php) utilis√© pour afficher la page

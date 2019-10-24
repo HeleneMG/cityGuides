@@ -125,6 +125,7 @@ h3{
 
 #membre-form button, #creation-annonce button{
     height: 44px;
+    margin-top: 20px;
     background-color: white;
     color: #FFC000;
     border-radius: 24px;
@@ -177,9 +178,10 @@ h3{
     padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .carte{
-    width: calc(90% /2);
+    width: 90%;
     margin: 8px auto;
     background-color: white;
     color: black;
@@ -346,6 +348,12 @@ footer ul{
     }
     .membre{
         width: 50%;
+    }
+    .annonces{
+        justify-content: flex-start;
+    }
+    .carte{
+        width: calc(90% /2);
     }
     #annonces{
         width: 50%;

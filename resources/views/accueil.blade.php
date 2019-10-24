@@ -36,8 +36,8 @@
                                 <i class="material-icons md-18 arrow-back">arrow_back</i>
                                 <li><a href="<?php echo url('/') ?>">Accueil</a></li>
                                 <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
-                                <li><a href="<?php echo url('/espace-annonces') ?>">Annonces</a></li>
                                 <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
+                                <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
                             </ul>
                             <h3>CityGuides</h3>
                         </div>
@@ -49,9 +49,9 @@
                                 <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
                                 <li><a href="<?php echo url('/') ?>">
                                         <h3>CityGuides</h3>
-                                    </a></li>
-                                <li><a href="#">Un autre menu</a></li>
+                                    </a></li>                               
                                 <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
+                                <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
                             </ul>
                         </div>
                     </nav>
