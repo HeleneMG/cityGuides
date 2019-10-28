@@ -19,14 +19,19 @@ Route::view('/', 'accueil');
 Route::any('/contact/store', 'contactController@store');
 Route::view('/contact', 'contact');
 Route::view('/espace-admin', 'espace-admin');
+
 Route::view('/espace-annonces', 'templates');
 Route::view('/annonces', 'test');
+
 Route::view('/login', 'login');
 Route::view('/register', 'register');
+
 Route::any('/annonce/store', 'AnnonceController@store');
+Route::any('/annonce/modifier', 'AnnonceController@modifier');
+Route::any('/annonce/supprimer', 'AnnonceController@supprimer');
 Route::view('/annonces', 'annonces');
 
-//limiter accès à l'espace memebre au membre connectés + logout
+//limiter accès à l'espace membre au membre connectés + logout
 Route::any('/espace-membre', 'AnnonceController@afficherEspaceMembre');
 Route::any('/deconnexion', 'AnnonceController@deconnexion');
 

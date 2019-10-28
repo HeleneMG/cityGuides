@@ -100,10 +100,3 @@ $(document).ready(function () {
     });
 })
 
-//VUEJS
-/*var app = new Vue({
-    el: '#app',
-    data: {
-        message: 'Hello Vue!'
-    }
-})*/

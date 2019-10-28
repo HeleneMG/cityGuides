@@ -129,7 +129,7 @@ foreach($tabAnnonce as $annonce)
     echo
 <<<CODEHTML
 <div class="carte">
-    <img src="{$annonce->image}" alt="{$annonce->image}">
+    <img src="{$annonce->photo}" alt="{$annonce->photo}">
     <div class="contenu">
         <h3>{$annonce->titre}</h3>
         <p>{$annonce->contenu}</p>

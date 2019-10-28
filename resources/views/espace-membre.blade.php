@@ -56,7 +56,7 @@
                         <form id="membre-form" action="/store" method="POST">
                             <label>
                                 <span>Nom</span>
-                                <input type="text" name="" required placeholder="" autofocus>
+                                <input type="text" name="" required placeholder="" value="user.name" autofocus>
                             </label>
                             <label>
                                 <span>PrÃ©nom</span>
@@ -148,22 +148,27 @@
                         </form>
                     </section>
 
-                    <section id="annonces">
+                    <section id="gestion-annonces">
                         <h3>CrÃ©er une annonce</h3>
                         <div class="creation-annonce">
-                            <form method="POST" action="annonce/store" id="creation-annonce">
+                            <form @submit.prevent="envoyerFormAjax" method="POST" action="annonce/store" enctype="multipart/form-data" id="creation-annonce">
                                 <span>Titre</span>
                                 <input type="text" name="titre" required placeholder="entrez votre titre">
 
                                 <div class="radio">
-                                    <span>Je fais visiter</span>
-                                    <input type="radio" name="choixVisite" id="guider" value="guider" required>
-                                    <span>Je veux visiter</span>
-                                    <input type="radio" name="choixVisite" id="visiter" value="visiter" required>
+                                    <span>Catégorie : </span>
+                                    <label>
+                                        <span>Je fais visiter</span>
+                                        <input type="radio" name="choixVisite" id="guider" value="guider" required>
+                                    </label>
+                                    <label>
+                                        <span>Je veux visiter</span>
+                                        <input type="radio" name="choixVisite" id="visiter" value="visiter" required>
+                                    </label>
                                 </div>
 
                                 <span>Photo</span>
-                                <input type="text" name="photo"  placeholder="entrez votre URL DE photo">
+                                <input type="file" name="photo" required placeholder="choisissez votre photo">
 
                                 <span>Description</span>
                                 <textarea name="contenu" required placeholder="entrez votre contenu" rows="5"></textarea>
@@ -178,37 +183,73 @@
                                 <input type="time" name="heure" required placeholder="entrez l'heure">
 
                                 <button type="submit">PUBLIER UNE ANNONCE</button>
+
+                                <div class="confirmation">
+                                    @{{ confirmation }}
+                                </div>
                                 @csrf
                             </form>
                         </div>
 
-                        <h3>Mes annonces</h3>
-                        <div class="annonces">
+                        <div class="lightbox modifAnnonce" v-if="annonceUpdate">
+                            <button @click="annonceUpdate = null" class="fermer">FERMER</button>
+                            <form @submit.prevent="envoyerFormAjax" method="POST" action="annonce/modifier" enctype="multipart/form-data" id="creation-annonce">
+                                <span>Titre</span>
+                                <input type="text" v-model="annonceUpdate.titre" name="titre" required placeholder="entrez votre titre">
 
-                            <?php
-$tabAnnonce = \App\Annonce::latest("updated_at")->get();
+                                <div class="radio">
+                                    <span>Catégorie : </span>
+                                    <label>
+                                        <span>Je fais visiter</span>
+                                        <input type="radio" name="choixVisite" id="guider" value="guider" required>
+                                    </label>
+                                    <label>
+                                        <span>Je veux visiter</span>
+                                        <input type="radio" name="choixVisite" id="visiter" value="visiter" required>
+                                    </label>
+                                </div>
 
-foreach($tabAnnonce as $annonce)
-{
-    echo
-<<<CODEHTML
-<div class="carte">
-    <img src="{$annonce->image}" alt="{$annonce->image}">
-    <div class="contenu">
-        <h3>{$annonce->titre}</h3>
-        <p>{$annonce->contenu}</p>
-        <h5>{$annonce->id}</h5>
-    </div>
-    <div class="reserver">
-        <h4>{$annonce->date}</h4>
-        <h5>{$annonce->heure}</h5>
-        <button><a href="#">Go !</a></button>
-    </div>
-</div>
-CODEHTML;
+                                <span>Photo</span>
+                                <input type="file" name="photo" placeholder="choisissez votre photo">
+                                <img :src="annonceUpdate.photo">
 
-}
-?>
+                                <span>Description</span>
+                                <textarea name="contenu" v-model="annonceUpdate.contenu" required placeholder="entrez votre contenu" rows="5"></textarea>
+
+                                <span>Ville</span>
+                                <input type="text" name="ville" v-model="annonceUpdate.ville" required placeholder="entrez la ville">
+
+                                <span>Date</span>
+                                <input type="date" name="date" v-model="annonceUpdate.date" required placeholder="entrez la date">
+
+                                <span>Heure</span>
+                                <input type="time" name="heure" v-model="annonceUpdate.heure" required placeholder="entrez l'heure">
+
+                                <button type="submit">MODIFIER CETTE ANNONCE (id=@{{ annonceUpdate.id }})</button>
+
+                                <input type="hidden" name="id" v-model="annonceUpdate.id">
+                                <div class="confirmation">
+                                    @{{ confirmation }}
+                                </div>
+                                @csrf
+                            </form>
+                        </div>
+                    </section>
+                    <section id="annonces">
+                        <div class="listeAnnonce">
+                            <h3>Mes annonces</h3>
+                            <div class="carte">
+                                <article v-for="annonce in annonces">
+                                    <img :src="annonce.photo">
+                                    <h4>@{{ annonce.titre }}</h4>
+                                    <p>@{{ annonce.contenu }}</p>
+                                    <p>@{{ annonce.date }}</p>
+                                    <p>@{{ annonce.heure }}</p>
+                                    <button @click.prevent="modifierAnnonce(annonce)">modifier</button>
+                                    <button @click.prevent="supprimerAnnonce(annonce)">supprimer</button>
+                                    @csrf
+                                </article>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -232,8 +273,9 @@ CODEHTML;
             </div>
         </div>
 
-        <script src="<?php echo url('/assets/js/main.js') ?>"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="<?php echo url('/assets/js/membre.js') ?>"></script>
+        <script src="<?php echo url('/assets/js/main.js') ?>"></script>
     </body>
 
 </html>
