@@ -2,7 +2,7 @@
 <html lang="fr">
 
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://unpkg.com/scrollreveal"></script>
@@ -26,7 +26,7 @@
                             <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
-                            <li><a href="<?php echo url('/deconnexion') ?>">Dï¿½connexion</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
 
                         </ul>
                         <h3>CityGuides</h3>
@@ -42,7 +42,7 @@
                                 </a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
-                            <li><a href="<?php echo url('/deconnexion') ?>">DÃ©connexion</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
 
                         </ul>
                     </div>
@@ -127,7 +127,7 @@
                                         <input type="radio" name="connaissanceVille" id="cinq" value="cinq">
                                     </label>
                                     <label>
-                                        <span>TrÃ¨s bien</span>
+                                        <span>Très bien</span>
                                         <input type="radio" name="connaissanceVille" id="quatre" value="quatre">
                                     </label>
                                     <label>
@@ -274,7 +274,7 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="<?php echo url('/assets/js/membre.js') ?>"></script>
+        <script src="<?php echo url('/assets/js/vue.js') ?>"></script>
         <script src="<?php echo url('/assets/js/main.js') ?>"></script>
     </body>
 

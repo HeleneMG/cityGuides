@@ -46,9 +46,9 @@
             </header>
 
             <main id="main">
-                <section class="contact"> 
+                <section class="contact">
                     <h3>Formulaire de contact</h3>
-                    <form id="contact-form" action="contact/store" method= "POST">
+                    <form @submit.prevent="envoyerFormAjax" method="POST" action="contact/store" enctype="multipart/form-data" id="contact-form">
                         <label>
                             <span>Nom</span>
                             <input type="text" name="nom" required placeholder="entrez votre nom" autofocus>
@@ -67,9 +67,13 @@
                             <textarea name="message" cols="10" rows="5" required placeholder="entrez votre message"></textarea>
                         </label>
 
-                        <!-- message confirmation vueJS-->
                         <button type="submit">Envoyer</button>
-@csrf
+
+                        <div class="confirmation">
+                            @{{ confirmation }}
+                            @{{ erreur }}
+                        </div>
+                        @csrf
                     </form>
                 </section>
             </main>
@@ -91,8 +95,9 @@
             </div>
         </div>
 
-        <script src="<?php echo url('/assets/js/main.js') ?>"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="<?php echo url('/assets/js/vue.js') ?>"></script>
+        <script src="<?php echo url('/assets/js/main.js') ?>"></script>
     </body>
 
 </html>
