@@ -8,6 +8,6 @@ class Annonce extends Model
 {
     // PROPRIETES D'OBJET
     protected $fillable = [
-        "titre", "contenu", "photo", "ville", "date", "heure", "user_id",
+        "titre", "choixVisite", "contenu", "photo", "ville", "date", "heure", "user_id",
     ];
 }

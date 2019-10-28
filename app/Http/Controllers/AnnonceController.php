@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 // NE PAS OUBLIER DE RAJOUTER CETTE LIGNE 
 // POUR POUVOIR UTILISER LA VALIDATION
 use Validator;
+use Illuminate\Validation\Rule;
+
 // NE PAS OUBLIER DE RAJOUTER CETTE LIGNE POUR UTILISATION Auth
 use Illuminate\Support\Facades\Auth;
 
@@ -101,12 +103,21 @@ class AnnonceController extends Controller
             // https://laravel.com/docs/5.7/validation#available-validation-rules
 
             $validator = Validator::make($request->all(), [
-                'titre'     => 'required|max:160',
-                'contenu'   => 'required',
-                'photo'     => 'required|max:160',
-                'ville'     => 'required|max:160',
-                'date'      => 'required|max:160',
-                'heure'     => 'required|max:160',
+                'titre'      => 'required|max:160',
+                'choixVisite'=> 'required',
+                'contenu'    => 'required',
+                'photo'      => 'required|max:160',
+                'ville'      => 'required|max:160',
+                'date'       => 'required|max:160',
+                'heure'      => 'required|max:160',
+            ]);
+
+
+            Validator::make($data, [
+                'choixVisites' => [
+                    'required',
+                    Rule::in(['guider', 'visiter']),
+                ],
             ]);
 
             if ($validator->fails()) 
@@ -124,7 +135,7 @@ class AnnonceController extends Controller
                 // IL FAUT AJOUTER DU CODE DANS
                 // app/Annonce.php
                 $tabInput = $request->only([
-                    "titre", "contenu", "photo", "ville", "date", "heure"
+                    "titre","choixVisite", "contenu", "photo", "ville", "date", "heure"
                 ]);
                 // ON VA AJOUTER L'INFO DU user_id
                 $tabInput["user_id"] = $utilisateurConnecte->id;

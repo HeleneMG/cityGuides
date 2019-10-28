@@ -2,7 +2,7 @@
 <html lang="fr">
 
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://unpkg.com/scrollreveal"></script>
@@ -56,24 +56,20 @@
                         <form id="membre-form" action="/store" method="POST">
                             <label>
                                 <span>Nom</span>
-                                <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
                                 <input type="text" name="" required placeholder="" autofocus>
                             </label>
                             <label>
                                 <span>Prénom</span>
-                                <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
                                 <input type="text" name="" required placeholder="">
                             </label>
                             <label>
                                 <span>Email</span>
                                 <input type="email" name="" required placeholder="">
                             </label>
-
                             <label>
                                 <span>Date de naissance</span>
                                 <input type="date" name="dateNaissance">
                             </label>
-
                             <div class="radio">
                                 <span>Sexe : </span>
                                 <label>
@@ -85,7 +81,6 @@
                                     <input type="radio" name="genre" id="monsieur" value="monsieur">
                                 </label>
                             </div>
-
                             <label>
                                 <span>Adresse</span>
                                 <input type="text" name="" required placeholder="">
@@ -117,7 +112,6 @@
                                     <span>Oui</span>
                                     <input type="radio" name="guider" id="oui" value="oui">
                                 </label>
-
                                 <label>
                                     <span>Non</span>
                                     <input type="radio" name="guider" id="non" value="non">
@@ -159,25 +153,38 @@
                             <form method="POST" action="annonce/store" id="creation-annonce">
                                 <span>Titre</span>
                                 <input type="text" name="titre" required placeholder="entrez votre titre">
+
+                                <div class="radio">
+                                    <span>Je fais visiter</span>
+                                    <input type="radio" name="choixVisite" id="guider" value="guider" required>
+                                    <span>Je veux visiter</span>
+                                    <input type="radio" name="choixVisite" id="visiter" value="visiter" required>
+                                </div>
+
                                 <span>Photo</span>
-                                <input type="text" name="photo" required placeholder="entrez votre URL DE photo">
+                                <input type="text" name="photo"  placeholder="entrez votre URL DE photo">
+
                                 <span>Description</span>
-                                <textarea name="contenu" required placeholder="entrez votre contenu"  rows="5"></textarea>
+                                <textarea name="contenu" required placeholder="entrez votre contenu" rows="5"></textarea>
+
                                 <span>Ville</span>
                                 <input type="text" name="ville" required placeholder="entrez la ville">
+
                                 <span>Date</span>
-                                <input type="text" name="date" required placeholder="entrez la date">
+                                <input type="date" name="date" required placeholder="entrez la date">
+
                                 <span>Heure</span>
-                                <input type="text" name="heure" required placeholder="entrez l'heure">
+                                <input type="time" name="heure" required placeholder="entrez l'heure">
+
                                 <button type="submit">PUBLIER UNE ANNONCE</button>
-                                <!-- RACCOURCI BLADE POUR AJOUTER UN CHAMP HIDDEN -->
                                 @csrf
                             </form>
                         </div>
 
                         <h3>Mes annonces</h3>
                         <div class="annonces">
-<?php
+
+                            <?php
 $tabAnnonce = \App\Annonce::latest("updated_at")->get();
 
 foreach($tabAnnonce as $annonce)
@@ -198,6 +205,7 @@ foreach($tabAnnonce as $annonce)
     </div>
 </div>
 CODEHTML;
+
 }
 ?>
                         </div>
