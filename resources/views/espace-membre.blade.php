@@ -26,7 +26,7 @@
                             <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
-                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">Dï¿½connexion</a></li>
 
                         </ul>
                         <h3>CityGuides</h3>
@@ -42,7 +42,7 @@
                                 </a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
-                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">DÃ©connexion</a></li>
 
                         </ul>
                     </div>
@@ -59,7 +59,8 @@
                                 <input type="text" name="" required placeholder="" autofocus>
                             </label>
                             <label>
-                                <span>Prénom</span>
+                                <span>PrÃ©nom</span>
+                                <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
                                 <input type="text" name="" required placeholder="">
                             </label>
                             <label>
@@ -126,7 +127,7 @@
                                         <input type="radio" name="connaissanceVille" id="cinq" value="cinq">
                                     </label>
                                     <label>
-                                        <span>Très bien</span>
+                                        <span>TrÃ¨s bien</span>
                                         <input type="radio" name="connaissanceVille" id="quatre" value="quatre">
                                     </label>
                                     <label>
@@ -148,7 +149,7 @@
                     </section>
 
                     <section id="annonces">
-                        <h3>Créer une annonce</h3>
+                        <h3>CrÃ©er une annonce</h3>
                         <div class="creation-annonce">
                             <form method="POST" action="annonce/store" id="creation-annonce">
                                 <span>Titre</span>

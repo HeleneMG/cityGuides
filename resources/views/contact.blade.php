@@ -54,8 +54,8 @@
                             <input type="text" name="nom" required placeholder="entrez votre nom" autofocus>
                         </label>
                         <label>
-                            <span>Prénom</span>
-                            <input type="text" name="prenom" required placeholder="entrez votre prénom">
+                            <span>PrÃ©nom</span>
+                            <input type="text" name="prenom" required placeholder="entrez votre prï¿½nom">
                         </label>
                         <label>
                             <span>Email</span>
