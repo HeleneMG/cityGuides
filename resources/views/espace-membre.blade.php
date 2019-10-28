@@ -26,7 +26,7 @@
                             <li><a href="<?php echo url('/espace-membre') ?>">Mon espace</a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
-                            <li><a href="<?php echo url('/deconnexion') ?>">D�connexion</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
 
                         </ul>
                         <h3>CityGuides</h3>
@@ -42,7 +42,7 @@
                                 </a></li>
                             <li><a href="<?php echo url('/contact') ?>">Contact</a></li>
                             <li><a href="<?php echo url('/register') ?>">Inscription</a></li>
-                            <li><a href="<?php echo url('/deconnexion') ?>">D�connexion</a></li>
+                            <li><a href="<?php echo url('/deconnexion') ?>">Déconnexion</a></li>
 
                         </ul>
                     </div>
@@ -59,7 +59,7 @@
                                 <input type="text" name="" required placeholder="" value="user.name" autofocus>
                             </label>
                             <label>
-                                <span>Prénom</span>
+                                <span>PrÃ©nom</span>
                                 <!-- CONSEIL: DONNER EN name LE NOM DE LA COLONNE SQL -->
                                 <input type="text" name="" required placeholder="">
                             </label>
@@ -127,7 +127,7 @@
                                         <input type="radio" name="connaissanceVille" id="cinq" value="cinq">
                                     </label>
                                     <label>
-                                        <span>Tr�s bien</span>
+                                        <span>Très bien</span>
                                         <input type="radio" name="connaissanceVille" id="quatre" value="quatre">
                                     </label>
                                     <label>
@@ -156,7 +156,7 @@
                                 <input type="text" name="titre" required placeholder="entrez votre titre">
 
                                 <div class="radio">
-                                    <span>Cat�gorie : </span>
+                                    <span>Catégorie : </span>
                                     <label>
                                         <span>Je fais visiter</span>
                                         <input type="radio" name="choixVisite" id="guider" value="guider" required>
@@ -198,7 +198,7 @@
                                 <input type="text" v-model="annonceUpdate.titre" name="titre" required placeholder="entrez votre titre">
 
                                 <div class="radio">
-                                    <span>Cat�gorie : </span>
+                                    <span>Catégorie : </span>
                                     <label>
                                         <span>Je fais visiter</span>
                                         <input type="radio" name="choixVisite" id="guider" value="guider" required>
@@ -263,8 +263,8 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>Mentions légales</li>
-                    <li>&copy;CityGuides 2019, tous droits réservés</li>
+                    <li>Mentions lÃ©gales</li>
+                    <li>&copy;CityGuides 2019, tous droits rÃ©servÃ©s</li>
                 </ul>
             </footer>
 
