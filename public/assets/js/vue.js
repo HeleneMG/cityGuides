@@ -22,7 +22,7 @@ var app = new Vue({
             formData.append('id', annonce.id);
             // sÃ©curitÃ© laravel
             // https://laravel.com/docs/5.8/csrf#csrf-x-csrf-token
-            formData.append('_token', '{{ csrf_token() }}');
+            formData.append('_token', monToken);
 
             fetch('annonce/supprimer', {
                 method: 'POST',

@@ -55,7 +55,7 @@
                         </label>
                         <label>
                             <span>Prénom</span>
-                            <input type="text" name="prenom" required placeholder="entrez votre pr�nom">
+                            <input type="text" name="prenom" required placeholder="entrez votre prénom">
                         </label>
                         <label>
                             <span>Email</span>

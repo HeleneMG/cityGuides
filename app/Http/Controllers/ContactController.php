@@ -94,7 +94,7 @@ class ContactController extends Controller
             // DANS LA CLASSE Contact.php
             // LA METHODE create VIENT DE LA CLASSE PARENTE Model
             Contact::create($tabAssoColonneValeur);
-            $tabAssoJson["confirmation"] = "Votre message a bien Ã©tÃ© envoyÃ©";
+            $tabAssoJson["confirmation"] = "Votre message a bien été envoyé";
         }
 
 

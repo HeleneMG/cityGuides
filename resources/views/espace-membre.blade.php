@@ -235,25 +235,24 @@
                             </form>
                         </div>
                     </section>
-                    <section id="annonces">
-                        <div class="listeAnnonce">
-                            <h3>Mes annonces</h3>
-                            <div class="carte">
-                                <article v-for="annonce in annonces">
-                                    <img :src="annonce.photo">
-                                    <h4>@{{ annonce.titre }}</h4>
-                                    <p>@{{ annonce.contenu }}</p>
-                                    <p>@{{ annonce.date }}</p>
-                                    <p>@{{ annonce.heure }}</p>
-                                    <button @click.prevent="modifierAnnonce(annonce)">modifier</button>
-                                    <button @click.prevent="supprimerAnnonce(annonce)">supprimer</button>
-                                    @csrf
-                                </article>
-                            </div>
-                        </div>
-                    </section>
                 </div>
-
+                <section id="annonces">
+                    <h3>Mes annonces</h3>
+                    <div class="listeAnnonce">
+                        <div class="carte">
+                            <article v-for="annonce in annonces">
+                                <img :src="annonce.photo">
+                                <h4>@{{ annonce.titre }}</h4>
+                                <p>@{{ annonce.contenu }}</p>
+                                <p>@{{ annonce.date }}</p>
+                                <p>@{{ annonce.heure }}</p>
+                                <button @click.prevent="modifierAnnonce(annonce)">modifier</button>
+                                <button @click.prevent="supprimerAnnonce(annonce)">supprimer</button>
+                                @csrf
+                            </article>
+                        </div>
+                    </div>
+                </section>
             </main>
 
             <footer>
@@ -263,8 +262,8 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>Mentions lÃ©gales</li>
-                    <li>&copy;CityGuides 2019, tous droits rÃ©servÃ©s</li>
+                    <li>Mentions légales</li>
+                    <li>&copy;CityGuides 2019, tous droits réservés</li>
                 </ul>
             </footer>
 
@@ -274,6 +273,10 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+        var monToken = '{{ csrf_token() }}';
+
+        </script>
         <script src="<?php echo url('/assets/js/vue.js') ?>"></script>
         <script src="<?php echo url('/assets/js/main.js') ?>"></script>
     </body>
